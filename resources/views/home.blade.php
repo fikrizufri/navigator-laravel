@@ -22,7 +22,17 @@
                                         
                                         <ul>
                                             @foreach ($menu->parents as $submenu)
-                                            <li>{{ $submenu->menu }}</li>
+                                            <li>{{ $submenu->menu }}
+                                                <ul>
+                                                    <li>{{$submenu->menu}}</li>
+                                                    {{-- @foreach ($menu->child as $submenusub)
+                                                    <li>
+                                                        {{@submenusub->id}}
+                                                    </li>
+                                                    @endforeach --}}
+                                                </ul>
+                                            </li>
+
                                             @endforeach
                                             
                                         </ul>

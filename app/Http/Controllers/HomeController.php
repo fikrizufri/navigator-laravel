@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $menus =  Menu::with('parents')->get();
+        $menus =  Menu::where('parent_id', 0)->get();
         
         return view('home', compact('menus'));
     }
