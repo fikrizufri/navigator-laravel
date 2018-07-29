@@ -24,12 +24,12 @@
                                             @foreach ($menu->parents as $submenu)
                                             <li>{{ $submenu->menu }}
                                                 <ul>
-                                                    <li>{{$submenu->menu}}</li>
-                                                    {{-- @foreach ($menu->child as $submenusub)
+                                                   
+                                                    @foreach ($submenu->child as $submenusub)
                                                     <li>
-                                                        {{@submenusub->id}}
+                                                            {{$submenusub->menu}}
                                                     </li>
-                                                    @endforeach --}}
+                                                    @endforeach
                                                 </ul>
                                             </li>
 
