@@ -19,12 +19,15 @@
                         <ul>
                             @foreach($menus as $menu)
                                     <li>{{ $menu->menu }}
-                                        @if($menu->id) > 0 )
+                                        
                                         <ul>
-                                            <li>1</li>
+                                            @foreach ($menu->parents as $submenu)
+                                            <li>{{ $submenu->menu }}</li>
+                                            @endforeach
+                                            
                                         </ul>
                                         
-                                        @endif
+                                        
                                     </li>                   
                             @endforeach
                             </ul>
